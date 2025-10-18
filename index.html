@@ -94,7 +94,7 @@ header a{display:flex;align-items:center;gap:0.5rem;text-decoration:none;}
 
 /* Contact & Legal Section Styles */
 #contact-legal { padding: 2.5rem 1.5rem; background-color: #f5f5f5; text-align: center; }
-.contact-container { margin-bottom: 2.5rem; }
+.contact-container { margin-bottom: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .contact-container .contact-item { display: inline-flex; align-items: center; gap: 0.75rem; background-color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 .contact-container svg { width: 1.5rem; height: 1.5rem; color: var(--primary-red); }
 .contact-container a { color: var(--primary-dark); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
@@ -197,7 +197,7 @@ footer a{text-decoration:underline;color:var(--primary-red); cursor: pointer;}
           <div class="author-initials-placeholder" aria-label="Vikas Rana">VR</div>
         </div>
         <div class="author-bio">
-          <h3>Vikas Rana</h3>
+          <h3>V Vikas Rana</h3>
           <p>Vikas Rana writes clear, practical guides to help readers build real-life skills and grow with confidence. His no-nonsense approach turns everyday challenges into simple steps for personal and professional success.</p>
           <p>Always curious, Vikas is passionate about exploring new topics and sharing fresh insights to empower readers on their journey.</p>
           <div class="author-note">
@@ -237,6 +237,12 @@ footer a{text-decoration:underline;color:var(--primary-red); cursor: pointer;}
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <a href="mailto:vikas@toolblaster.com">vikas@toolblaster.com</a>
+            </div>
+            <div class="contact-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" style="width: 1.25rem; height: 1.25rem; color: var(--primary-dark);">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+                <a href="https://x.com/vikasrana03" target="_blank" rel="noopener noreferrer">@vikasrana03 on X</a>
             </div>
         </div>
         <div class="legal-grid">
@@ -286,8 +292,8 @@ footer a{text-decoration:underline;color:var(--primary-red); cursor: pointer;}
 
 <footer>
   <p>
-    <span id="copyright-year"></span> <strong>Life Skills Books by <a href="https://x.com/vikasrana03" target="_blank" rel="noopener noreferrer">Vikas Rana</a></strong>. All rights reserved.
-    <br class="sm:hidden"> A Project by <a href="https://www.toolblaster.com" target="_blank" rel="noopener noreferrer">toolblaster.com</a> | <strong><a href="#legal">Contact & Legal</a></strong>
+    © 2025 book.toolblaster.com | A proud part of the <a href="https://www.toolblaster.com" target="_blank" rel="noopener noreferrer">toolblaster.com</a> Network by <a href="https://x.com/vikasrana03" target="_blank" rel="noopener noreferrer">Vikas Rana</a>
+    <br class="sm:hidden"> | <strong><a href="#legal">Contact & Legal</a></strong>
   </p>
 </footer>
 
@@ -326,12 +332,6 @@ window.addEventListener('hashchange', handleRouteChange);
 // Handle the initial page load based on the URL
 document.addEventListener('DOMContentLoaded', () => {
     handleRouteChange();
-    // Set the copyright year automatically
-    const copyrightSpan = document.getElementById('copyright-year');
-    if(copyrightSpan) {
-        // FIX: Corrected the character encoding issue for the copyright symbol.
-        copyrightSpan.textContent = `© ${new Date().getFullYear()}`;
-    }
 });
 
 
